@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+  </head>
+  <body>
+   <div id="firebaseui-auth-container"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                User
+              </a>
+              {% if user_data %}
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">{{ user_data['name'] }}</a>
+                <a class="dropdown-item" href="#">{{ user_data['email'] }}</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Edit Profile</a>
+              </div>
+              {% endif %}
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+         
+        </div>
+      </nav>
+      <!-- Body section -->
+      <div class="container">
+       <br>
+       <br>
+        <h2>All Bookings </h2>
+        <table class="table table-bordered">
+         <thead>
+           <tr>
+             <th scope="col">Room ID</th>
+             <th scope="col">Time Booked</th>
+             <th scope="col">Action</th>
+           </tr>
+         </thead>
+         <tbody>
+          {% for booked in booked %}
+           <tr>
+             <th scope="row">{{ booked['room_id'] }}</th>
+             <td>{{ booked['book_time'] }}</td>
+             <td> 
+              
+                <button type="button" onclick="/delete" class="btn btn-outline-primary btn-block">Delete</button>
+              
+             </td>
+           </tr>
+           {% endfor %}
+         </tbody>
+       </table>
+       <hr>
+       <div class="row">
+         
+        <div class="col-4">
+          
+        </div>
+        <div class="  col-4 ">
+          <a href="{{ url_for('root')}}">
+            <button type="button" class="btn btn-outline-primary btn-block">Back to Home</button>
+          </a>
+        </div>
+        
+        <div class="col-4">
+          
+        </div>
+
+       </div>
+       <hr>
+      </div>
+      
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="{{ url_for('static', filename='js/app_setup.js') }}"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+  </head>
+  <body>
+   <div id="firebaseui-auth-container"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                User Data
+              </a>
+              {% if user_data %}
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">{{ user_data['name'] }}</a>
+                <a class="dropdown-item" href="#">{{ user_data['email'] }}</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Edit Profile</a>
+              </div>
+              {% endif %}
+            </li>
+          </ul>
+          
+         
+        </div>
+      </nav>
+      <!-- Body section -->
+      <div class="container">
+       <br>
+       <br>
+       <header><h2>Add Room</h2></header>
+       <form class=" form-outline jumbotron" action = "/new_room" method = "POST">
+         <div class="form-group">
+           <label for="roomNumber">Room Number</label>
+           <input type="text" class="form-control" name = "room_number" id="room_number" placeholder="1234...">
+         </div>
+         <div class="form-group">
+           <label for="roomPrice">Room Price</label>
+           <input type="text" class="form-control" name = "room_price" id="room_price" placeholder="$ 00 ">
+         </div>
+         <div class="form-row">
+           <div class="form-group col-md-4">
+             <label for="roomType">Room Type</label>
+             <select id="room_type" name = "form-control"  class="form-control">
+               <option selected>Choose...</option>
+               <option>Single Room</option>
+               <option>One Bedroom</option>
+               <option>Two Bedroom</option>
+             </select>
+           </div>
+         </div>
+         <button type="submit" class="btn btn-primary">ADD ROOM</button>
+       </form>
+          
+      </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="{{ url_for('static', filename='js/app_setup.js') }}"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

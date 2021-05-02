@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "book-room-7557d",
+  "private_key_id": "65442131d830fe8aff57ef9a62e01f263c5d09d4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1Iqgt1lYUcYF1\n6iO2+aztHWIuSFarCNoV/ic9XAL9YX+DcVRDIFJ9u4p1buZ6JSABjFgWGPTJ37tM\ncfPSlsTpk7L2uz95B4qusGKQgBinYSSf3otDDMpFw9W5VUksba7zukNtJzluM8Yq\n9oLB4EMT23B8ibIhAowYwBIE8fQSz8yRAf6QyWT73wTKaRJIqai/7mukAo0TJwuY\n6rkYdO7+hV9xmK01eSKZ19HvQgNln0QDSkZE074IJzQ+EVMm/gvPitsWHgkrakow\nMwxwJtcWmtPcfvnkC2/Ye8/HzXrZqkRCtkxRExj/YDq9nIspFbPvuzyqe0bnBzdD\nrjvxvVwTAgMBAAECggEAF02zpF4Iag3mUXTDjoVVrZXTrU+qMsvrPtwZUUgWrGGQ\nRaldZVtxsXJg0FXpufovwXM8W+9vAs/RaXbZnxS9la1mX17cviXtvia8L4oDYflZ\n/GVltkUdetdEllj2Foyv7vReO1tKBLcNfjaDwQyopJPdR3BxpdSNkJuZVeCI/ahd\n0tdCPQvmtlEMJG4U/NXhQF2C1jwFTCHvSAEYBMnUE3GDlIewtx0lZCnaohnVQodj\n6tjjhsgZ8rmG0xtokyG4fuRz1Im2TjmtHcawPwoeTBY2Or36ICOrXg9cj/VdVt6x\nwMGyay3bnoUbTkshFjnZ3oBtC+e/LEZ/lc6VJC+S1QKBgQDju8g7bSpC2Ijp4/IW\n+zxfu2MTDoK+Xgx722fHtgc/Z3g1hepXbzH6cyOIG4Y8U++zjkCZhiT5msXTapvQ\naqt4R8LE0U5Rl1mNdcKwoNZpMrdiJsM2fw3xyQTP2GeIlVulGNcYZgP7M74qnP65\nPnIh7dWkubTzliLdSHjmqPgIRQKBgQDLnjjF6HTUrVcnYT5EbsDqZrpmyT2xSBxy\nUi831CPZTLTej1sqSVN0E/aXONdSCqrj3tdaYcFAQAj2LJxmOWQm92kH7EIkbeKj\nByuiACf2Ev7OZG6Z9iijGHH0tOCGdU+W79X3ozafuDWhFIjEcKkAl2wgpuyzeQp9\npdMJYq20dwKBgCLd81A17IyDfqLgxYYDPUEi/Y5DYH0pBRxJgWAwXHe2rc70C+cL\nHUnNKxmBrVG7QC3rj7Rxt2OH8NXnsqd8TXiC9C0SJr2TQKDJ8N7+IRXGMBGVAbps\nRYRJVLVF2sQsqfVjEjuoEt/5EhqQIufVyb+sHFO2IyBQUlIy8F/QavlJAoGBAIDt\ngXNG+lsEGxBTUZMRMdP6EgMtX4PWbjSw9zb5e22HVWsrCIWhAleYoGYmVqibGpPI\nsUGIbk4ZfdMqcimEI3dM51Nd9I+OiJfD3YvpX2Q/qNnU2/de12JWAyn4McbRlwCy\ngiAYV2kQwdxp3SPNViWKu6t9JpmJhewDSLpDokuHAoGBAIB2MCF7Nxibq8yRdLUZ\n5jF96KwRDBNmTjq+cLnjZwLhMgbxBRUuptqNJ4bZEpIPM8B5k9z1HLkbEbi/xVVu\nCu665N6p/c2xBYLAeMuYbWGYOm52GNTNuXAlL5OPWX/0FRMcNE2Zi3Dt44QZBCO1\ndSt/Nn5xUCgf+xPY1s1YuurT\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-datastore-service-account@book-room-7557d.iam.gserviceaccount.com",
+  "client_id": "114616388237002326846",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-datastore-service-account%40book-room-7557d.iam.gserviceaccount.com"
+}

@@ -52,6 +52,7 @@
         <table class="table table-bordered">
          <thead>
            <tr>
+            <th scope="col">Book ID</th>
              <th scope="col">Room ID</th>
              <th scope="col">Time Booked</th>
              <th scope="col">Action</th>
@@ -60,6 +61,7 @@
          <tbody>
           {% for booked in booked %}
            <tr>
+            <th scope="row">{{ booked['id'] }}</th>
              <th scope="row">{{ booked['room_id'] }}</th>
              <td>{{ booked['book_time'] }}</td>
              <td> 

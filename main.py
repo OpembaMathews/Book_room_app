@@ -121,6 +121,7 @@ def mark_done(client: datastore.Client, task_id: Union[str, int]):
 @app.route('/new_room', methods=['POST','GET'])
 def new_room():
     id_token = request.cookies.get("token")
+    print(f"Token: {id_token}")
     client = None
     error_message = None
     claims = None
@@ -172,10 +173,10 @@ def store_time(dt):
      entity.update({'timestamp' : dt})
      datastore_client.put(entity)
 
-@app.route('/home')
+@app.route('/')
 def home():
 
-    return render_template('page/home.html')
+    return render_template('page/index.html')
 
 
 @app.route('/delete')
@@ -186,7 +187,12 @@ def delete_booking():
     # For help authenticating your client, visit
     # https://cloud.google.com/docs/authentication/getting-started
     client = datastore.Client()
-    key = client.key("Bookings", 10000)
+    query = client.query(kind="Bookings")
+    all_bookings = query.fetch(id )
+    print(id)
+
+    key = client.key("Bookings","5667525748588544")
+    print(key)
     delete = client.delete(key)
     return "Item deleted"
         
@@ -222,8 +228,6 @@ def view_bookings():
 
 @app.route('/rooms')
 def root():
-    credential_path = "book-room-7557d-65442131d830.json"
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
 
     id_token = request.cookies.get("token")
     client = None

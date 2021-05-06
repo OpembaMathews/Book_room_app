@@ -52,6 +52,7 @@
         <table class="table table-bordered">
          <thead>
            <tr>
+            <th scope="col">Room ID.</th>
              <th scope="col">Room No.</th>
              <th scope="col">Room Type</th>
              <th scope="col">Room Price</th>
@@ -62,6 +63,7 @@
          <tbody>
           {% for allRooms in allRooms %}
            <tr>
+            <th scope="row">{{ allRooms['id'] }}</th>
              <th scope="row">{{ allRooms['room_number'] }}</th>
              <td>{{ allRooms['room_type'] }}</td>
              <td>{{ allRooms['room_price'] }}</td>
